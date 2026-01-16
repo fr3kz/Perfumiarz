@@ -1,0 +1,77 @@
+﻿version: "3.9"
+
+services:
+  perfumeservice:
+    image: perfumeservice
+    container_name: perfumeservice
+    build:
+      context: .
+      dockerfile: PerfumeService/Dockerfile
+    expose:
+      - "8080"
+    depends_on:
+      - postgresdb
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__DefaultConnection: Host=postgresdb;Port=5432;Database=perfumedb;Username=perfumeuser;Password=perfumepass
+    networks:
+      - perfume-network
+
+  postgresdb:
+    image: postgres:16
+    container_name: postgresdb
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: perfumedb
+      POSTGRES_USER: perfumeuser
+      POSTGRES_PASSWORD: perfumepass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - perfume-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.pl
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgresdb
+    networks:
+      - perfume-network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certbot/www:/var/www/certbot
+      - ./nginx/certbot/conf:/etc/letsencrypt
+    depends_on:
+      - perfumeservice
+    networks:
+      - perfume-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./nginx/certbot/www:/var/www/certbot
+      - ./nginx/certbot/conf:/etc/letsencrypt
+    networks:
+      - perfume-network
+
+volumes:
+  postgres_data:
+
+networks:
+  perfume-network:
+    driver: bridge
