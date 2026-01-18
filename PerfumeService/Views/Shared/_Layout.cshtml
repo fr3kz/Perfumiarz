@@ -1,201 +1,67 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PerfumeService</title>
-    <script type="importmap"></script>
+    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/vendor.css">
+    <link rel="stylesheet" href="~/css/vendor.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/style.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PerfumeService.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <svg style="display: none;">
+        <symbol id="location" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
+        <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 1.23 0 2.44.2 3.57.57.35.13.74.04 1.02-.24l2.2-2.2z"/></symbol>
+        <symbol id="email" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+        <symbol id="clock" viewBox="0 0 24 24"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></symbol>
+        </svg>
+
     <header id="header">
         <nav class="header-top bg-dark py-1">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                     <ul class="info d-flex flex-wrap list-unstyled m-0">
                         <li class="location text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-                            <svg class="text-primary me-1" width="15" height="15">
-                                <use xlink:href="#location"></use>
-                            </svg>State Road 54 Trinity, Florida
+                            <svg class="text-primary me-1" width="15" height="15"><use xlink:href="#location"></use></svg>
+                            Warszawa, Polska
                         </li>
                         <li class="phone text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-                            <svg class="text-primary me-1" width="15" height="15">
-                                <use xlink:href="#phone"></use>
-                            </svg>+666 333 9999
-                        </li>
-                        <li class="time text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-                            <svg class="text-primary me-1" width="15" height="15">
-                                <use xlink:href="#clock"></use>
-                            </svg>8:00-18:00, Sat: Closed
+                            <svg class="text-primary me-1" width="15" height="15"><use xlink:href="#phone"></use></svg>
+                            +48 123 456 789
                         </li>
                     </ul>
-                    <ul class="social-links d-flex flex-wrap list-unstyled m-0">
-                        <li class="social">
-                            <a href="#">
-                                <svg class="me-1" width="16" height="16">
-                                    <use xlink:href="#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social ms-4">
-                            <a href="#">
-                                <svg class="me-1" width="16" height="16">
-                                    <use xlink:href="#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social ms-4">
-                            <a href="#">
-                                <svg class="me-1" width="16" height="16">
-                                    <use xlink:href="#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social ms-4">
-                            <a href="#">
-                                <svg class="me-1" width="16" height="16">
-                                    <use xlink:href="#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social ms-4">
-                            <a href="#">
-                                <svg class="me-1" width="16" height="16">
-                                    <use xlink:href="#youtube"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-
                 </div>
             </div>
         </nav>
 
         <nav id="primary-header" class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <a class="navbar-brand" href="~/index.html">
-                    <img src="~/images/main-logo.png" class="logo img-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/main-logo.png" class="logo img-fluid" alt="Logo">
                 </a>
                 <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
-                    <svg class="navbar-icon" width="60" height="60">
-                        <use xlink:href="#navbar-icon"></use>
-                    </svg>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+                <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar">
                     <div class="offcanvas-header px-4 pb-0">
-                        <button type="button" class="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas" aria-label="Close"
-                                data-bs-target="#bdNavbar"></button>
+                        <button type="button" class="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
                     </div>
                     <div class="offcanvas-body align-items-center justify-content-end">
                         <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
-                            <li class="nav-item px-3">
-                                <a class="nav-link active p-0" aria-current="page" href="~/index.html">Home</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link p-0" href="~/about.html">About</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link p-0" href="~/services.html">Services</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link p-0" href="~/blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link p-0" href="~/contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item px-3 dropdown">
-                                <a class="nav-link p-0 dropdown-toggle text-center " data-bs-toggle="dropdown" href="#" role="button"
-                                   aria-expanded="false">Pages</a>
-                                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
-                                    <li class="py-1">
-                                        <a href="~/about.html" class="dropdown-item text-uppercase ">
-                                            About <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/blog.html" class="dropdown-item text-uppercase ">
-                                            Blog <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/blog-single.html" class="dropdown-item text-uppercase ">
-                                            Blog-Single <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/quote.html" class="dropdown-item text-uppercase ">
-                                            quote <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/services.html" class="dropdown-item text-uppercase ">
-                                            Services <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/services-single.html" class="dropdown-item text-uppercase ">
-                                            Service-Single
-                                            <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/project.html" class="dropdown-item text-uppercase ">
-                                            Project <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/project-single.html" class="dropdown-item text-uppercase ">
-                                            Project-Single
-                                            <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/pricing.html" class="dropdown-item text-uppercase ">
-                                            Pricing <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/contact.html" class="dropdown-item text-uppercase ">
-                                            Contact <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/team.html" class="dropdown-item text-uppercase ">
-                                            Our Team <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/review.html" class="dropdown-item text-uppercase ">
-                                            Reviews <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li class="py-1">
-                                        <a href="~/faq.html" class="dropdown-item text-uppercase ">
-                                            FAQs <span class="badge bg-secondary">Pro</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link p-0 fw-bold text-uppercase"
-                                   href="https://templatesjungle.gumroad.com/l/sola-solar-energy-bootstrap-html-website-template"
-                                   target="_blank">Get Pro</a>
-                            </li>
-
-                            <li class="nav-item ps-3 mt-4 mt-lg-0">
-                                <a href="~/quote.html" class="btn btn-outline-primary py-2 px-4">Get a quote</a>
-                            </li>
-
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="About">O nas</a></li>
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="Services">Usługi</a></li>
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="Projects">Projekty</a></li>
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="Blog">Blog</a></li>
+                            <li class="nav-item px-3"><a class="nav-link p-0" asp-controller="Home" asp-action="Contact">Kontakt</a></li>
                         </ul>
                     </div>
                 </div>
@@ -203,20 +69,56 @@
         </nav>
     </header>
 
-    @* <div class="container"> *@
-    @* <main role="main" class="pb-3"> *@
-    @* @RenderBody() *@
-    @* </main> *@
-    @* </div> *@
     @RenderBody()
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - PerfumeService - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    <section id="footer">
+        <div class="container footer-container mt-5 pt-3">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <h5 class="py-3">Kontakt</h5>
+                    <ul class="nav flex-column">
+                        <li class="d-flex align-items-center mb-2"><svg class="text-primary me-2" width="16" height="16"><use xlink:href="#location"></use></svg> Warszawa, Polska</li>
+                        <li class="d-flex align-items-center mb-2"><svg class="text-primary me-2" width="16" height="16"><use xlink:href="#phone"></use></svg> +48 123 456 789</li>
+                        <li class="d-flex align-items-center mb-2"><svg class="text-primary me-2" width="16" height="16"><use xlink:href="#email"></use></svg> kontakt@perfumiarz.pl</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <h5 class="py-3">Szybkie linki</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link p-0 text-muted">O nas</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Services" class="nav-link p-0 text-muted">Usługi</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Contact" class="nav-link p-0 text-muted">Kontakt</a></li>
+                    </ul>
+                </div>
+                </footer>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <p class="col-md-4 mb-0 text-muted">&copy; 2025 Perfumiarz. Wszystkie prawa zastrzeżone.</p>
+            </footer>
+        </div>
+    </section>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/jquery-1.11.0.min.js"></script> 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
