@@ -1,182 +1,222 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PerfumeService</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="~/css/vendor.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="~/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/PerfumeService.styles.css" asp-append-version="true"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PerfumeService.styles.css" asp-append-version="true" />
 </head>
 <body>
-<header id="header">
-    <nav class="header-top bg-dark py-1">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <ul class="info d-flex flex-wrap list-unstyled m-0">
-            <li class="location text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-              <svg class="text-primary me-1" width="15" height="15">
-                <use xlink:href="#location"></use>
-              </svg>State Road 54 Trinity, Florida
-            </li>
-            <li class="phone text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-              <svg class="text-primary me-1" width="15" height="15">
-                <use xlink:href="#phone"></use>
-              </svg>+666 333 9999
-            </li>
-            <li class="time text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
-              <svg class="text-primary me-1" width="15" height="15">
-                <use xlink:href="#clock"></use>
-              </svg>8:00-18:00, Sat: Closed
-            </li>
-          </ul>
-          <ul class="social-links d-flex flex-wrap list-unstyled m-0">
-            <li class="social">
-              <a href="#">
-                <svg class="me-1" width="16" height="16">
-                  <use xlink:href="#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social ms-4">
-              <a href="#">
-                <svg class="me-1" width="16" height="16">
-                  <use xlink:href="#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social ms-4">
-              <a href="#">
-                <svg class="me-1" width="16" height="16">
-                  <use xlink:href="#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social ms-4">
-              <a href="#">
-                <svg class="me-1" width="16" height="16">
-                  <use xlink:href="#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social ms-4">
-              <a href="#">
-                <svg class="me-1" width="16" height="16">
-                  <use xlink:href="#youtube"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+    <header id="header">
+        <nav class="header-top bg-dark py-1">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <ul class="info d-flex flex-wrap list-unstyled m-0">
+                        <li class="location text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
+                            <svg class="text-primary me-1" width="15" height="15">
+                                <use xlink:href="#location"></use>
+                            </svg>State Road 54 Trinity, Florida
+                        </li>
+                        <li class="phone text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
+                            <svg class="text-primary me-1" width="15" height="15">
+                                <use xlink:href="#phone"></use>
+                            </svg>+666 333 9999
+                        </li>
+                        <li class="time text-white text-capitalize d-flex align-items-center me-4" style="font-size: 12px;">
+                            <svg class="text-primary me-1" width="15" height="15">
+                                <use xlink:href="#clock"></use>
+                            </svg>8:00-18:00, Sat: Closed
+                        </li>
+                    </ul>
+                    <ul class="social-links d-flex flex-wrap list-unstyled m-0">
+                        <li class="social">
+                            <a href="#">
+                                <svg class="me-1" width="16" height="16">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social ms-4">
+                            <a href="#">
+                                <svg class="me-1" width="16" height="16">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social ms-4">
+                            <a href="#">
+                                <svg class="me-1" width="16" height="16">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social ms-4">
+                            <a href="#">
+                                <svg class="me-1" width="16" height="16">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social ms-4">
+                            <a href="#">
+                                <svg class="me-1" width="16" height="16">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
 
+                </div>
+            </div>
+        </nav>
+
+        <nav id="primary-header" class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="~/index.html">
+                    <img src="~/images/main-logo.png" class="logo img-fluid">
+                </a>
+                <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+                    <svg class="navbar-icon" width="60" height="60">
+                        <use xlink:href="#navbar-icon"></use>
+                    </svg>
+                </button>
+                <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <button type="button" class="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas" aria-label="Close"
+                                data-bs-target="#bdNavbar"></button>
+                    </div>
+                    <div class="offcanvas-body align-items-center justify-content-end">
+                        <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                            <li class="nav-item px-3">
+                                <a class="nav-link active p-0" aria-current="page" href="~/index.html">Home</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link p-0" href="~/about.html">About</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link p-0" href="~/services.html">Services</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link p-0" href="~/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link p-0" href="~/contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item px-3 dropdown">
+                                <a class="nav-link p-0 dropdown-toggle text-center " data-bs-toggle="dropdown" href="#" role="button"
+                                   aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
+                                    <li class="py-1">
+                                        <a href="~/about.html" class="dropdown-item text-uppercase ">
+                                            About <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/blog.html" class="dropdown-item text-uppercase ">
+                                            Blog <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/blog-single.html" class="dropdown-item text-uppercase ">
+                                            Blog-Single <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/quote.html" class="dropdown-item text-uppercase ">
+                                            quote <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/services.html" class="dropdown-item text-uppercase ">
+                                            Services <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/services-single.html" class="dropdown-item text-uppercase ">
+                                            Service-Single
+                                            <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/project.html" class="dropdown-item text-uppercase ">
+                                            Project <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/project-single.html" class="dropdown-item text-uppercase ">
+                                            Project-Single
+                                            <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/pricing.html" class="dropdown-item text-uppercase ">
+                                            Pricing <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/contact.html" class="dropdown-item text-uppercase ">
+                                            Contact <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/team.html" class="dropdown-item text-uppercase ">
+                                            Our Team <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/review.html" class="dropdown-item text-uppercase ">
+                                            Reviews <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="~/faq.html" class="dropdown-item text-uppercase ">
+                                            FAQs <span class="badge bg-secondary">Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link p-0 fw-bold text-uppercase"
+                                   href="https://templatesjungle.gumroad.com/l/sola-solar-energy-bootstrap-html-website-template"
+                                   target="_blank">Get Pro</a>
+                            </li>
+
+                            <li class="nav-item ps-3 mt-4 mt-lg-0">
+                                <a href="~/quote.html" class="btn btn-outline-primary py-2 px-4">Get a quote</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @* <div class="container"> *@
+    @* <main role="main" class="pb-3"> *@
+    @* @RenderBody() *@
+    @* </main> *@
+    @* </div> *@
+    @RenderBody()
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - PerfumeService - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-      </div>
-    </nav>
-
-    <nav id="primary-header" class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/main-logo.png" class="logo img-fluid">
-        </a>
-        <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
-          data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
-          <svg class="navbar-icon" width="60" height="60">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
-        </button>
-        <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-          <div class="offcanvas-header px-4 pb-0">
-            <button type="button" class="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas" aria-label="Close"
-              data-bs-target="#bdNavbar"></button>
-          </div>
-          <div class="offcanvas-body align-items-center justify-content-end">
-            <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
-              <li class="nav-item px-3">
-                <a class="nav-link active p-0" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link p-0" href="about.html">About</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link p-0" href="services.html">Services</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link p-0" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link p-0" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item px-3 dropdown">
-                <a class="nav-link p-0 dropdown-toggle text-center " data-bs-toggle="dropdown" href="#" role="button"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
-                  <li class="py-1"><a href="about.html" class="dropdown-item text-uppercase ">About <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase ">Blog <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="blog-single.html" class="dropdown-item text-uppercase ">Blog-Single <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="quote.html" class="dropdown-item text-uppercase ">quote <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="services.html" class="dropdown-item text-uppercase ">Services <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="services-single.html" class="dropdown-item text-uppercase ">Service-Single
-                      <span class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="project.html" class="dropdown-item text-uppercase ">Project <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="project-single.html" class="dropdown-item text-uppercase ">Project-Single
-                      <span class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="pricing.html" class="dropdown-item text-uppercase ">Pricing <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase ">Contact <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="team.html" class="dropdown-item text-uppercase ">Our Team <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="review.html" class="dropdown-item text-uppercase ">Reviews <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                  <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase ">FAQs <span
-                        class="badge bg-secondary">Pro</span></a></li>
-                </ul>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link p-0 fw-bold text-uppercase"
-                  href="https://templatesjungle.gumroad.com/l/sola-solar-energy-bootstrap-html-website-template"
-                  target="_blank">Get Pro</a>
-              </li>
-
-              <li class="nav-item ps-3 mt-4 mt-lg-0">
-                <a href="quote.html" class="btn btn-outline-primary py-2 px-4">Get a quote</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-@* <div class="container"> *@
-@*     <main role="main" class="pb-3"> *@
-@*         @RenderBody() *@
-@*     </main> *@
-@* </div> *@
-@RenderBody()
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - PerfumeService - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
