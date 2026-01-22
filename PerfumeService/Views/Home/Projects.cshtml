@@ -1,0 +1,182 @@
+@{
+    ViewData["Title"] = "Nasze weryfikacje";
+}
+
+<!-- HERO -->
+<section id="banner"
+         style="background-image: url('@Url.Content("~/images/slider-image2.jpg")');
+                background-size: cover;
+                background-position: center;
+                height: 50vh;">
+
+    <div class="container h-100">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
+            <h2 class="display-1 fw-bold text-white">Nasze weryfikacje</h2>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center bg-transparent">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="text-white text-uppercase text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active text-white text-uppercase">
+                        Projekty
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<!-- OPIS -->
+<section class="padding-medium">
+    <div class="container text-center">
+
+        <h6 class="text-primary">Prawdziwe przypadki</h6>
+        <h3 class="display-5 fw-bold mb-3">
+            Ostatnie weryfikacje perfum
+        </h3>
+
+        <p class="fs-5">
+            Każda weryfikacja to realny przypadek klienta.
+            Poniżej prezentujemy wybrane przykłady – zarówno
+            <strong>oryginały</strong>, jak i <strong>podróbki</strong>.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- FILTRY -->
+<section class="padding-small">
+    <div class="container text-center">
+
+        <button class="filter-button px-3 me-2 mb-3 active" data-filter="*">Wszystkie</button>
+        <button class="filter-button px-3 me-2 mb-3" data-filter=".original">Oryginały</button>
+        <button class="filter-button px-3 me-2 mb-3" data-filter=".fake">Podróbki</button>
+        <button class="filter-button px-3 me-2 mb-3" data-filter=".niche">Nisza</button>
+        <button class="filter-button px-3 me-2 mb-3" data-filter=".mainstream">Mainstream</button>
+        <button class="filter-button px-3 me-2 mb-3" data-filter=".vintage">Vintage</button>
+
+    </div>
+</section>
+
+
+<!-- PROJEKTY -->
+<section id="projects" class="padding-medium">
+    <div class="container">
+
+        <div class="isotope-container row">
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item fake mainstream">
+                <img src="~/images/verify/fake-sauvage.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-danger mt-3">PODRÓBKA</h6>
+                <h4>Dior Sauvage Elixir</h4>
+
+                <p>
+                    Nieprawidłowy batch code, zły kolor atomizera,
+                    brak laserowego graweru na spodzie flakonu.
+                </p>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item original mainstream">
+                <img src="~/images/verify/original-sauvage.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-success mt-3">ORYGINAŁ</h6>
+                <h4>Dior Sauvage Elixir</h4>
+
+                <p>
+                    Poprawny batch, szkło o wysokiej klarowności,
+                    zgodna typografia oraz atomizer.
+                </p>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item fake niche">
+                <img src="~/images/verify/fake-br540.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-danger mt-3">PODRÓBKA</h6>
+                <h4>MFK Baccarat Rouge 540</h4>
+
+                <p>
+                    Zbyt jasne szkło, inna czcionka logo,
+                    brak numeru serii producenta.
+                </p>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item original niche">
+                <img src="~/images/verify/original-br540.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-success mt-3">ORYGINAŁ</h6>
+                <h4>MFK Baccarat Rouge 540</h4>
+
+                <p>
+                    Głęboki czerwony kolor szkła,
+                    idealne krawędzie flakonu,
+                    prawidłowy batch.
+                </p>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item fake vintage">
+                <img src="~/images/verify/fake-chanel5.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-danger mt-3">PODRÓBKA</h6>
+                <h4>Chanel No.5 (Vintage)</h4>
+
+                <p>
+                    Brak numeru formy szkła,
+                    inny korek i niezgodna pojemność.
+                </p>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="col-md-4 mb-4 item original vintage">
+                <img src="~/images/verify/original-chanel5.jpg" class="img-fluid rounded" />
+
+                <h6 class="text-success mt-3">ORYGINAŁ</h6>
+                <h4>Chanel No.5 (1980)</h4>
+
+                <p>
+                    Oryginalny korek Baccarat,
+                    stary system batch,
+                    szkło produkcji Brosse.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section id="contact-info" class="padding-small bg-gray">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+
+            <div>
+                <h3 class="display-5 fw-bold mb-3">
+                    Masz podobny flakon?
+                </h3>
+                <p>
+                    Zanim kupisz – sprawdź.
+                </p>
+            </div>
+
+            <a asp-controller="Verification"
+               asp-action="Create"
+               class="btn btn-primary">
+                Zweryfikuj swoje perfumy
+            </a>
+
+        </div>
+    </div>
+</section>

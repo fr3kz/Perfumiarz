@@ -2,21 +2,180 @@
     ViewData["Title"] = "Usługi";
 }
 
-<section id="banner" class="d-flex align-items-center justify-content-center" style="background-image: url('@Url.Content("~/images/slider-image1.jpg")'); height: 50vh; background-size: cover; background-position: center;">
-    <div class="container text-center">
-        <h1 class="display-1 fw-bold text-white">Nasze Usługi</h1>
+<!-- HERO -->
+<section id="hero"
+         class="padding-medium"
+         style="background-image: url('@Url.Content("~/images/slider-image1.jpg")');
+                background-size: cover;
+                background-position: center;">
+
+    <div class="container">
+        <div class="d-flex flex-column align-items-center text-white">
+            <h2 class="display-2 fw-bold text-white">Weryfikacja perfum</h2>
+
+            <nav class="breadcrumb bg-transparent">
+                <a class="breadcrumb-item text-white"
+                   asp-controller="Home"
+                   asp-action="Index">Strona główna</a>
+
+                <span class="breadcrumb-item active text-white">
+                    Usługi
+                </span>
+            </nav>
+        </div>
     </div>
 </section>
 
-<section id="services" class="padding-medium">
+
+<!-- CO ROBIMY -->
+<section class="padding-medium">
     <div class="container">
+
+        <h6 class="text-primary text-center">Jak działamy</h6>
+        <h3 class="display-5 fw-bold text-center mb-5">
+            Ty wysyłasz zdjęcia – my sprawdzamy autentyczność
+        </h3>
+
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4">
+                <img src="~/images/icon-photo.png" width="70" class="mb-3" />
+                <h5>1. Wysyłasz zdjęcia</h5>
+                <p>
+                    Przesyłasz zdjęcia flakonu, opakowania, atomizera
+                    oraz kodów batch.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <img src="~/images/icon-search.png" width="70" class="mb-3" />
+                <h5>2. Analiza ekspercka</h5>
+                <p>
+                    Porównujemy każdy detal z oryginalnymi egzemplarzami
+                    oraz bazą producentów.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <img src="~/images/icon-certificate.png" width="70" class="mb-3" />
+                <h5>3. Wynik weryfikacji</h5>
+                <p>
+                    Otrzymujesz jednoznaczną opinię:
+                    <strong>oryginał / podróbka / egzemplarz niejednoznaczny</strong>.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- USŁUGI -->
+<section id="services" class="padding-medium bg-light">
+    <div class="container">
+
+        <h6 class="text-primary text-center">Nasze usługi</h6>
+        <h3 class="display-5 fw-bold text-center mb-5">
+            Co dokładnie weryfikujemy
+        </h3>
+
         <div class="row">
-            <div class="col-md-4">
-                <div class="service-box">
-                    <h3>Weryfikacja foto</h3>
-                    <p>Opis usługi...</p>
+
+            <!-- USŁUGA -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="service-post h-100">
+                    <img src="~/images/service1.jpg" class="img-fluid" />
+                    <div class="mt-3">
+                        <h5>Weryfikacja flakonu</h5>
+                        <p>
+                            Analiza szkła, nadruków, atomizera,
+                            korka oraz proporcji.
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="service-post h-100">
+                    <img src="~/images/service2.jpg" class="img-fluid" />
+                    <div class="mt-3">
+                        <h5>Weryfikacja opakowania</h5>
+                        <p>
+                            Karton, folia, nadruki, czcionki,
+                            jakość klejenia i oznaczenia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="service-post h-100">
+                    <img src="~/images/service3.jpg" class="img-fluid" />
+                    <div class="mt-3">
+                        <h5>Kody batch</h5>
+                        <p>
+                            Sprawdzamy zgodność dat produkcji
+                            i lokalizacji fabryki.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="service-post h-100">
+                    <img src="~/images/service4.jpg" class="img-fluid" />
+                    <div class="mt-3">
+                        <h5>Certyfikat</h5>
+                        <p>
+                            Dla oryginalnych perfum wystawiamy
+                            cyfrowy certyfikat autentyczności.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CZAS -->
+<section class="padding-medium">
+    <div class="container text-center">
+
+        <h3 class="display-5 fw-bold mb-3">
+            Czas realizacji
+        </h3>
+
+        <p class="fs-5">
+            ⏱ Standardowa weryfikacja: <strong>24–48 godzin</strong><br />
+            ⚡ Tryb ekspresowy: <strong>do 12 godzin</strong>
+        </p>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section id="contact-info" class="padding-small bg-gray">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+
+            <div>
+                <h3 class="display-5 fw-bold mb-3">
+                    Masz perfumy do sprawdzenia?
+                </h3>
+                <p>
+                    Wyślij zdjęcia i miej pewność, że kupujesz oryginał.
+                </p>
+            </div>
+
+            <a asp-controller="Verification"
+               asp-action="Create"
+               class="btn btn-primary">
+                Wyślij perfumy do weryfikacji
+            </a>
+
         </div>
     </div>
 </section>

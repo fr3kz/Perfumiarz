@@ -2,208 +2,202 @@
     ViewData["Title"] = "O nas";
 }
 
-<section id="banner" style="background-image: url('@Url.Content("~/images/slider-image.jpg")'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 50vh;">
+<!-- HERO -->
+<section id="banner"
+         style="background-image: url('@Url.Content("~/images/slider-image.jpg")');
+                background-size: cover;
+                background-position: center;
+                height: 50vh;">
+
     <div class="container h-100">
-        <div class="d-flex flex-column justify-content-center align-items-center h-100">
-            <h2 class="display-1 fw-bold text-white">About Us</h2>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
+            <h2 class="display-1 fw-bold text-white">O nas</h2>
+
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
+                <ol class="breadcrumb justify-content-center bg-transparent">
                     <li class="breadcrumb-item">
-                        <a asp-controller="Home" asp-action="Index" class="text-white text-decoration-none text-uppercase">Home</a>
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="text-white text-uppercase text-decoration-none">
+                            Home
+                        </a>
                     </li>
-                    <li class="breadcrumb-item active text-white text-uppercase" aria-current="page">About Us</li>
+                    <li class="breadcrumb-item active text-white text-uppercase">
+                        O nas
+                    </li>
                 </ol>
             </nav>
         </div>
     </div>
 </section>
 
-<section id="about-us">
+
+<!-- O NAS -->
+<section id="about-us" class="padding-medium">
     <div class="container">
         <div class="row align-items-center">
+
             <div class="col-lg-6">
                 <div class="imageblock me-4 position-relative">
-                    <img class="img-fluid" src="~/images/about.png" alt="img">
-                    <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY"
-                       data-bs-target="#myModal" class="play-btn position-absolute top-50 start-50 translate-middle">
+                    <img class="img-fluid rounded" src="~/images/about.png" alt="Perfumiarz">
+
+                    <a type="button"
+                       data-bs-toggle="modal"
+                       data-src="https://www.youtube.com/embed/W_tIumKa8VY"
+                       data-bs-target="#myModal"
+                       class="play-btn position-absolute top-50 start-50 translate-middle">
                         <svg class="play-icon text-primary" width="70" height="70">
                             <use xlink:href="#play"></use>
                         </svg>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 mt-5 mt-lg-0">
-                <h6 class="text-primary">About Us</h6>
-                <h3 class="display-5 fw-bold mb-3">Among the Top 10 Solar & Renewable Energy Industry</h3>
-                <p>
-                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet. Tempor erat sed stet lorem
-                    sit clita duo justo elitr rebum at clita diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                    ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet
-                </p>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                Experienced Team
-                            </li>
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                Quality Services
-                            </li>
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                Affordable Pricing
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                24/7 Support
-                            </li>
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                Free Consultation
-                            </li>
-                            <li class="mb-2">
-                                <svg class="text-primary me-2" width="20" height="20"><use xlink:href="#circle-check"></use></svg>
-                                Certified Company
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <a class="btn btn-primary mt-4" asp-controller="Home" asp-action="Contact">Contact Us</a>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+
+                <h6 class="text-primary">Kim jesteśmy</h6>
+
+                <h3 class="display-5 fw-bold mb-3">
+                    Perfumiarz – niezależna weryfikacja autentyczności perfum
+                </h3>
+
+                <p>
+                    Perfumiarz powstał z pasji do perfum oraz potrzeby walki z
+                    coraz większą skalą podróbek obecnych na rynku wtórnym.
+                </p>
+
+                <p>
+                    Każdego dnia tysiące osób kupuje perfumy na marketplace’ach,
+                    w grupach kolekcjonerskich czy komisach internetowych –
+                    często nie mając pewności co do ich autentyczności.
+                </p>
+
+                <p>
+                    Naszym celem jest dostarczanie rzetelnej, eksperckiej i
+                    niezależnej opinii opartej wyłącznie na faktach,
+                    dokumentacji producentów oraz realnych porównaniach.
+                </p>
+
             </div>
         </div>
     </div>
 </section>
 
+
+<!-- DLACZEGO -->
 <section id="feature">
     <div class="container">
-        <h6 class="text-primary">Why Choose Us!</h6>
-        <h3 class="display-5 fw-bold mb-3">Our motive to change world</h3>
-        <p>
-            Aliqu diam amet diam et dolor diam ipsum sit tet lorem sit clita duo eos. <br> Clita erat ipsum et lorem et
-            sit, sed tempor erat elitr rebum at clita.
+
+        <h6 class="text-primary">Dlaczego Perfumiarz?</h6>
+        <h3 class="display-5 fw-bold mb-3">
+            Autentyczność nie powinna być domysłem
+        </h3>
+
+        <p class="mb-5">
+            Rynek podróbek perfum rozwija się szybciej niż kiedykolwiek.
+            Naszą misją jest edukacja klientów i eliminowanie ryzyka
+            nieuczciwych zakupów.
         </p>
+
         <div class="row">
-            <div class="col-md-6 col-lg-3">
+
+            <div class="col-md-3">
                 <div class="position-relative">
-                    <h2 style="color:#F9F4EC; -webkit-text-stroke: 1px #E6E1D9; font-size: 130px; ">01</h2>
-                    <h6 class="position-absolute top-50 start-50 translate-end m-0">Quality services</h6>
+                    <h2 class="feature-number">01</h2>
+                    <h6>Ekspercka analiza</h6>
+                    <p>
+                        Każda weryfikacja opiera się na setkach detali:
+                        flakon, atomizer, szkło, nadruki i batch code.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+
+            <div class="col-md-3">
                 <div class="position-relative">
-                    <h2 style="color:#F9F4EC; -webkit-text-stroke: 1px #E6E1D9; font-size: 130px; ">02</h2>
-                    <h6 class="position-absolute top-50 start-50 translate-end m-0">expertise workers</h6>
+                    <h2 class="feature-number">02</h2>
+                    <h6>Brak automatu</h6>
+                    <p>
+                        Nie korzystamy z generatorów AI – każdą analizę
+                        wykonuje człowiek.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+
+            <div class="col-md-3">
                 <div class="position-relative">
-                    <h2 style="color:#F9F4EC; -webkit-text-stroke: 1px #E6E1D9; font-size: 130px; ">03</h2>
-                    <h6 class="position-absolute top-50 start-50 translate-end m-0">Free consulting</h6>
+                    <h2 class="feature-number">03</h2>
+                    <h6>Transparentność</h6>
+                    <p>
+                        Klient otrzymuje jasny werdykt wraz z uzasadnieniem.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+
+            <div class="col-md-3">
                 <div class="position-relative">
-                    <h2 style="color:#F9F4EC; -webkit-text-stroke: 1px #E6E1D9; font-size: 130px; ">04</h2>
-                    <h6 class="position-absolute top-50 start-50 translate-end m-0">Customer support</h6>
+                    <h2 class="feature-number">04</h2>
+                    <h6>Bezpieczeństwo</h6>
+                    <p>
+                        Chronimy Twoje zdrowie — podróbki nie spełniają norm IFRA.
+                    </p>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<section id="our-team" class="padding-medium bg-gray">
+
+<!-- LICZBY -->
+<section id="info" class="padding-medium bg-gray">
     <div class="container">
-        <h6 class="text-center text-primary">Our Team</h6>
-        <h3 class="text-center display-5 fw-bold mb-5">Meet Our Experts</h3>
-        <div class="row">
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="team-member position-relative">
-                    <img src="~/images/team1.jpg" class="img-fluid rounded" alt="Team Member">
-                    <div class="team-content bg-white p-3 text-center position-absolute bottom-0 start-50 translate-middle-x w-75 shadow rounded">
-                        <h5 class="fw-bold mb-0">John Doe</h5>
-                        <small class="text-primary text-uppercase">CEO & Founder</small>
-                        <div class="social-links mt-2">
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#facebook"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#twitter"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#linkedin"></use></svg></a>
-                        </div>
-                    </div>
-                </div>
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+                <h3 class="display-3 fw-bold text-primary">2000+</h3>
+                <h6>Zadowolonych klientów</h6>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="team-member position-relative">
-                    <img src="~/images/team2.jpg" class="img-fluid rounded" alt="Team Member">
-                    <div class="team-content bg-white p-3 text-center position-absolute bottom-0 start-50 translate-middle-x w-75 shadow rounded">
-                        <h5 class="fw-bold mb-0">Jane Smith</h5>
-                        <small class="text-primary text-uppercase">Engineer</small>
-                        <div class="social-links mt-2">
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#facebook"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#twitter"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#linkedin"></use></svg></a>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="col-md-3 mb-4">
+                <h3 class="display-3 fw-bold text-primary">1700+</h3>
+                <h6>Wykonanych weryfikacji</h6>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="team-member position-relative">
-                    <img src="~/images/team3.jpg" class="img-fluid rounded" alt="Team Member">
-                    <div class="team-content bg-white p-3 text-center position-absolute bottom-0 start-50 translate-middle-x w-75 shadow rounded">
-                        <h5 class="fw-bold mb-0">Mike Johnson</h5>
-                        <small class="text-primary text-uppercase">Manager</small>
-                        <div class="social-links mt-2">
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#facebook"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#twitter"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#linkedin"></use></svg></a>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="col-md-3 mb-4">
+                <h3 class="display-3 fw-bold text-primary">95%</h3>
+                <h6>Wykrytych podróbek</h6>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="team-member position-relative">
-                    <img src="~/images/team4.jpg" class="img-fluid rounded" alt="Team Member">
-                    <div class="team-content bg-white p-3 text-center position-absolute bottom-0 start-50 translate-middle-x w-75 shadow rounded">
-                        <h5 class="fw-bold mb-0">Sarah Wilson</h5>
-                        <small class="text-primary text-uppercase">Consultant</small>
-                        <div class="social-links mt-2">
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#facebook"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#twitter"></use></svg></a>
-                            <a href="#" class="mx-1"><svg width="16" height="16"><use xlink:href="#linkedin"></use></svg></a>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="col-md-3 mb-4">
+                <h3 class="display-3 fw-bold text-primary">24–48h</h3>
+                <h6>Średni czas analizy</h6>
             </div>
+
         </div>
     </div>
 </section>
 
-<section id="partners" class="padding-medium">
+
+<!-- CTA -->
+<section id="contact-info" class="padding-small bg-gray">
     <div class="container">
-        <h6 class="text-center text-primary">Our Partners</h6>
-        <h3 class="text-center display-5 fw-bold mb-5">Trusted By Companies</h3>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
-                <img src="~/images/logo1.png" class="img-fluid opacity-50 hover-opacity-100 transition" alt="Partner Logo">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+
+            <div>
+                <h3 class="display-5 fw-bold mb-3">
+                    Masz wątpliwości co do swoich perfum?
+                </h3>
+                <p>
+                    Wyślij zdjęcia i otrzymaj rzetelną opinię eksperta.
+                </p>
             </div>
-            <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
-                <img src="~/images/logo2.png" class="img-fluid opacity-50 hover-opacity-100 transition" alt="Partner Logo">
-            </div>
-            <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
-                <img src="~/images/logo3.png" class="img-fluid opacity-50 hover-opacity-100 transition" alt="Partner Logo">
-            </div>
-            <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
-                <img src="~/images/logo4.png" class="img-fluid opacity-50 hover-opacity-100 transition" alt="Partner Logo">
-            </div>
-            <div class="col-6 col-md-2 mb-4 mb-md-0 text-center">
-                <img src="~/images/logo5.png" class="img-fluid opacity-50 hover-opacity-100 transition" alt="Partner Logo">
-            </div>
+
+            <a asp-controller="Verification"
+               asp-action="Create"
+               class="btn btn-primary">
+                Zweryfikuj perfumy
+            </a>
+
         </div>
     </div>
 </section>
